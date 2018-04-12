@@ -133,13 +133,13 @@ gulp.task("copy", function () {
 });
 
 gulp.task('scripts', function () {
-	return gulp.src(['../script/jquery-3.3.1.min.js', '../script/script.js'])
+	return gulp.src(['source/script/jquery-3.3.1.min.js', 'source/script/script.js'])
 		.pipe(sizereport())
-		.pipe(concat('script.js'))
+		.pipe(concat('script-min.js'))
 		.pipe(sizereport())
-		.pipe(minify({}))
+		.pipe(minify())
 		.pipe(sizereport())
-		.pipe(gulp.dest('../script'));
+		.pipe(gulp.dest('source/script'));
 
 });
 
