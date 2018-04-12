@@ -18,6 +18,8 @@ var del = require('del');
 var csscomb = require('gulp-csscombx');
 var svgo = require('gulp-svgo');
 var webp = require('gulp-webp');
+var concat = require('gulp-concat');
+var minify = require('gulp-minify');
 
 
 gulp.task("style", function () {
@@ -121,13 +123,26 @@ gulp.task("copy", function () {
     "source/img/**",
     "source/js/**",
 	"source/css/**",
-	"source/less/**",
+	"source/mywork/**",
+	"source/script/**",
     "source/*.html"
  ], {
 			base: "source"
 		})
-		.pipe(gulp.dest("build"));
+		.pipe(gulp.dest("../"));
 });
+
+gulp.task('scripts', function () {
+	return gulp.src(['../script/jquery-3.3.1.min.js', '../script/script.js'])
+		.pipe(sizereport())
+		.pipe(concat('script.js'))
+		.pipe(sizereport())
+		.pipe(minify({}))
+		.pipe(sizereport())
+		.pipe(gulp.dest('../script'));
+
+});
+
 gulp.task('build', function (callback) {
 	run("clean", "style", "copy", "tinypng", callback)
 });
