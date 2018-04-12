@@ -62,8 +62,7 @@ jQuery(function (f) {
 	});
 });
 /*------------------------------------------------*/
-
-var buttonModal = document.querySelector(".contacts__button");
+/*var buttonModal = document.querySelector(".contacts__button");
 var Modalfon = document.querySelector(".modal__fone");
 var form = document.querySelector(".modal__form");
 var formclose = document.querySelector(".modal__button--close");
@@ -89,7 +88,7 @@ window.addEventListener('keydown', function (evt) {
 	if (evt.keyCode === 27) {
 		close();
 	}
-});
+});*/
 
 
 ! function (a) {
