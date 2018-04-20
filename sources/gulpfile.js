@@ -106,7 +106,9 @@ gulp.task('imgsize', function () {
 gulp.task('webp', function () {
 	gulp.src('source/img/*.{jpeg,jpg,png}')
 		.pipe(sizereport())
-		.pipe(webp())
+		.pipe(webp({
+			quality: 90
+		}))
 		.pipe(sizereport())
 		.pipe(gulp.dest('source/img'))
 });
