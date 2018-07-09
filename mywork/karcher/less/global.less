@@ -1,0 +1,142 @@
+@font-face {
+	font-family: "Arvo";
+	src: url("../fonts/ArvoRegular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "OpenSansRegular";
+	src: url("../fonts/OpenSansRegular.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "RobotoThin";
+	src: url("../fonts/RobotoThin.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "RobotoBlack";
+	src: url("../fonts/RobotoBlack.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "RobotoBold";
+	src: url("../fonts/RobotoBold.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "OpenSansSemibold";
+	src: url("../fonts/OpenSansSemibold.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+@font-face {
+	font-family: "RobotoMedium";
+	src: url("../fonts/RobotoMedium.woff") format("woff");
+	font-weight: normal;
+	font-style: normal;
+}
+
+
+
+h2,
+h3 {
+	font-family: 'Arvo', serif;
+	font-style: normal;
+	font-weight: 400;
+	color: #212121;
+}
+
+h2 {
+	font-size: 36px;
+	line-height: 46px;
+}
+
+.button{
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0 20px;
+	background-color: #ffc80a;
+	width: auto;
+	height: 47px;
+	font-family: "RobotoMedium";
+	font-size: 12px;
+	letter-spacing: 0.24em;
+	color: #ffffff;
+	border: 0;
+	border-radius: 25px;
+	box-sizing: border-box;
+	transition: all 0.1s ease;
+	&:hover {
+		background-color: #dcaf14;
+	}
+	&:focus {
+		box-shadow: inset 0px 4px 1px #000;
+	}
+}
+.container-succes {
+	position: fixed;
+	z-index: 100;
+	right: 0;
+	left: 0;
+	top: 0;
+	width: 100vw;
+	height: 100vh;
+	opacity: 0.8;
+	background-color: #fff;
+	&--hidden {
+		display: none;
+	}
+}
+.succes__popup {
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	width: auto;
+	padding: 10px;
+	height: 15%;
+	max-height: 224px;
+	border-radius: 20px;
+	color: #000;
+	font-size: 20px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	text-transform: uppercase;
+	opacity: 1;
+	z-index: 101;
+	transform: translate(-50%, -50%);
+	background-color: #ffc80a;
+
+}
+@media all and(max-width: 919px) {
+	h2 {
+			text-align: center;
+	    font-size: 30px;
+			br {
+				display: none;
+			}
+	}
+}
+
+@media all and(max-width: 719px) {
+	h2 {
+	    font-size: 27px;
+			br {
+				display: none;
+			}
+	}
+}
