@@ -1,0 +1,160 @@
+.index__catalog-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.index__catalog-country-container {
+  font-family: "Montserrat-ExtraBold";
+}
+
+.index__catalog-country {
+  font-size: 55px;
+  line-height: 58px;
+}
+
+.index__see-all {
+  font-size: 9px;
+  position: relative;
+  &::after {
+    content: '';
+    position: absolute;
+    right: -50px;
+    top: 50%;
+    transform: translateY(-50%);
+    background-color: black;
+    height: 1.8px;
+    width: 45px;
+  }
+}
+
+.index__slider-item {
+  font-family: "Montserrat-ExtraBold";
+  position: relative;
+}
+
+.index__slider-free {
+  display: block;
+  margin: 0;
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 49px;
+  max-width: 100%;
+  height: 49px;
+  background-color: #e9013c;
+  color: #ffffff;
+  font-size: 14px;
+  text-align: center;
+  padding-top: 5px;
+  z-index: 1;
+  span {
+    font-size: 20px;
+  }
+}
+
+.index__slider-img {
+  display: block;
+}
+
+.index__slider-text {
+  padding-left: 21px;
+  padding-bottom: 40px;
+  box-sizing: border-box;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  color: #ffffff;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  font-family: "Montserrat-Bold";
+}
+
+.index__slider-text-bg {
+  position: absolute;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0, 0.64);
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: 0.4s opacity ease;
+}
+
+.index__slider-capodanno {
+  font-family: "Montserrat-Regular";
+  color: #ffffff;
+  font-size: 9px;
+  margin: 0;
+}
+
+.index__slider-country {
+  margin-top: 7px;
+  font-size: 29px;
+  padding-bottom: 30px;
+  position: relative;
+  margin-bottom: 30px;
+  &::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    height: 1.8px;
+    width: 45px;
+    background-color: #ffffff;
+  }
+}
+
+.index__slider-price {
+  margin: 0;
+  font-size: 20px;
+  sup {
+    font-family: "Montserrat-Medium";
+    font-size: 12px;
+  }
+}
+.index__slider-hover {
+  padding-top: 60px;
+  font-family: "Montserrat-ExtraBold";
+}
+
+.index__slider-hover-button {
+  display: block;
+  text-align: center;
+  width: 167px;
+  height: 33px;
+  text-transform: uppercase;
+  line-height: 33px;
+  font-size: 12px;
+  color: #e9013c;
+  border: 1px solid #e9013c;
+  box-sizing: border-box;
+  margin-bottom: 17px;
+  font-weight: normal;
+  font-style: normal;
+}
+
+.index__slider-hover-link {
+  font-size: 9px;
+  color: #ffffff;
+  position: relative;
+  &::after {
+    content: '';
+    top: 50%;
+    transform: translateY(-50%);
+    right: -60px;
+    position: absolute;
+    background-color: #ffffff;
+    width: 45px;
+    height: 1.7px;
+  }
+}
+
+.index__slider-item:hover {
+  .index__slider-text-bg {
+    opacity: 1;
+
+  }
+}
